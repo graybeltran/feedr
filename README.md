@@ -108,7 +108,7 @@ __Additoinal UI interaction rules:__
 
 ---
 
-### Suggested Ways to Get Started
+### Getting Started
 
 Begin by "fork"ing this repository. You can do so by clicking the "Fork" icon on
 the top right of [this](https://github.com/GA-JS-Pilot/feedr) page. Once
