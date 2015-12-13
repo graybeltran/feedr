@@ -18,58 +18,81 @@ __Feed sources:__
 
 Give the user the ability to pull from a minimum of three news sources. You can select the three provided news sources and/or add your own:
 
-  - [Mashable: http://mashable.com/stories.json](http://mashable.com/stories.json)
-  - [Reddit: https://www.reddit.com/top.json](https://www.reddit.com/top.json)
-  - [Digg: http://digg.com/api/news/popular.json](http://digg.com/api/news/popular.json)
+- [Mashable: http://mashable.com/stories.json](http://mashable.com/stories.json)
+- [Reddit: https://www.reddit.com/top.json](https://www.reddit.com/top.json)
+- [Digg: http://digg.com/api/news/popular.json](http://digg.com/api/news/popular.json)
 
 If you use your own feeds, they must have APIs with the following minimum requirements:
 
-  - Each article must provide an image source for the circular thumbnail at the left of the article.
-  - Must provide either a category, tag, or custom taxonomy to display below the title (of course title of article is also required).
-  - Must provide a point, ranking, or some type of total impressions for the respective article.
-  - Must provide either a full version or a summary of the article for the pop up screen.
+- Each article must provide an image source for the circular thumbnail at the left of the article.
+- Must provide either a category, tag, or custom taxonomy to display below the title (of course title of article is also required).
+- Must provide a point, ranking, or some type of total impressions for the respective article.
+- Must provide either a full version or a summary of the article for the pop up screen.
 
 __Feed rules:__
 
-  - When the application first loads display the loading container (see below on instructions to toggle this). When you successfully retrieve information from the default API hide the loader and replace the content of the __#main__ container with that of the API. The DOM structure of each article must adhere to the __.article__ structure.
-  - When the user selects an article's title show the __#popUp__ overlay. The content of the article must be inserted in the __container__ class inside __#popUp__. Make sure you remove the __loader__ class when toggling the article information in the pop-up.
-  - Change the link of the "Read more from source" button to that of the respective article.
-  - When the user selects a source from the dropdown menu on the header, replace the content of the page with articles from the newly selected source. Display the loading pop up when the user first selects the new source, and hide it on success.
-  - Add an error message (either alert or a notification on the page) if the app cannot load from the selected feed.
+- When the application first loads display the loading container (see below on instructions to toggle this). When you successfully retrieve information from the default API hide the loader and replace the content of the __#main__ container with that of the API. The DOM structure of each article must adhere to the __.article__ structure.
+- When the user selects an article's title show the __#popUp__ overlay. The content of the article must be inserted in the __container__ class inside __#popUp__. Make sure you remove the __loader__ class when toggling the article information in the pop-up.
+- Change the link of the "Read more from source" button to that of the respective article.
+- When the user selects a source from the dropdown menu on the header, replace the content of the page with articles from the newly selected source. Display the loading pop up when the user first selects the new source, and hide it on success.
+- Add an error message (either alert or a notification on the page) if the app cannot load from the selected feed.
 
 __Additoinal UI interaction rules:__
 
-  - When the user clicks/taps the search icon, expand the input box. Best approach for this is to toggle the __active__ class for the __#search__ container. If the search input box is already expanded tapping the search icon again will close the input. Pressing the "Enter" key should also close the opened input box. _See Bonus 2 for search filtering functionality._
-  - When the app is first loading and when the user selects to load a new feed from the dropdown, display the __#popUp__ container with the __loader__ class. You can toggle the __hidden__ class from the container to display/hide the overlay container.
-  - Add functionality to hide the pop-up when user selects the "X" button on the pop-up.
-  - Clicking/tapping the "Feedr" logo will display the main/default feed.
+- When the user clicks/taps the search icon, expand the input box. Best approach for this is to toggle the __active__ class for the __#search__ container. If the search input box is already expanded tapping the search icon again will close the input. Pressing the "Enter" key should also close the opened input box. _See Bonus 2 for search filtering functionality._
+- When the app is first loading and when the user selects to load a new feed from the dropdown, display the __#popUp__ container with the __loader__ class. You can toggle the __hidden__ class from the container to display/hide the overlay container.
+- Add functionality to hide the pop-up when user selects the "X" button on the pop-up.
+- Clicking/tapping the "Feedr" logo will display the main/default feed.
 
 
 #### Bonus
 
-  1. Merge all feeds into one main feed in chronological order for the initial view. When the user clicks/taps the "Feedr" logo at the top, they should be return to this feed. This will be the new "home view."
-  2. Filter feed by title according to user keyboard input on the search input box. This should run the filter on every keystroke. When the input box is cleared, all articles should display in the respective feed.
-  3. Add infinite scrolling. Start displaying only the first 20 articles and keep loading more on user scrolling.
+1. Merge all feeds into one main feed in chronological order for the initial view. When the user clicks/taps the "Feedr" logo at the top, they should be return to this feed. This will be the new "home view."
+2. Filter feed by title according to user keyboard input on the search input box. This should run the filter on every keystroke. When the input box is cleared, all articles should display in the respective feed.
+3. Add infinite scrolling. Start displaying only the first 20 articles and keep loading more on user scrolling.
 
 ---
 
 ### Necessary Deliverables
 
-  - A **working feedr, built by you**, that can be run locally
-  - A **git repository hosted on Github**, with the code necessary to run your project
-  - Most of the students' work will be done on the **app.js** file. You may update the index.html and style.css files if you would like to further customize your app.
+- A **working feedr, built by you**, that can be run locally
+- A **git repository hosted on Github**, with the code necessary to run your project
+- Most of the students' work will be done on the **app.js** file. You may update the index.html and style.css files if you would like to further customize your app.
 
 ---
 
 ### Suggested Ways to Get Started
 
-  - Start by adding all the DOM functionality first.
-  - Map out all of the needed fields/properties from each respective feed.
-  - Start by doing a console.log of the incoming feeds to confirm you have a successful transaction before you start mapping anything out.
-  - Make sure you have the JSON View chrome extension to get a clean view of the JSON dump in your browser.
-  - Think about ways to best standardize all of your incoming data.
-  - Test small pieces of functionality frequently, to make sure everything is working.
-  - Use tools such as Stack Overflow, Google and documentation resources to solve problems.
+Begin by "fork"ing this repository. You can do so by clicking the "Fork" icon on
+the top right of [this](https://github.com/GA-JS-Pilot/feedr) page. Once
+complete, clone the repository to your computer by running the following
+commands:
+
+```
+cd ~/Sites/
+git clone https://github.com/<your-username-here>/feedr.git
+cd feedr
+```
+
+You can then open Sublime Text and point it at the `~/Sites/feedr` directory and
+work on the below steps. As you accomplish a feature, be sure to commit it in
+Git with the following commands:
+
+```
+git add .
+git commit -m "A description of what was added"
+git push -u origin master
+```
+
+Here are some sugestions on where to start:
+
+- Start by adding all the DOM functionality first.
+- Map out all of the needed fields/properties from each respective feed.
+- Start by doing a console.log of the incoming feeds to confirm you have a successful transaction before you start mapping anything out.
+- Make sure you have the JSON View chrome extension to get a clean view of the JSON dump in your browser.
+- Think about ways to best standardize all of your incoming data.
+- Test small pieces of functionality frequently, to make sure everything is working.
+- Use tools such as Stack Overflow, Google and documentation resources to solve problems.
 
 ---
 
@@ -77,13 +100,13 @@ __Additoinal UI interaction rules:__
 
 **Key Resources**
 
-  - [MDN JavaScript data types and data structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
-  - [jQuery Event Basics](https://learn.jquery.com/events/event-basics/)
-  - [Understanding Event Delegation](http://learn.jquery.com/events/event-delegation/)
-  - [jQuery Tutorial](http://tutorials.jenkov.com/jquery/index.html#jquery-version-used-in-this-tutorial)
-  - [A beginner's guide to HTTP and REST](http://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340)
-  - [Async JS Callbacks](http://sporto.github.io/blog/2012/12/09/callbacks-listeners-promises/)
-  - [SitePoint: Intro to jQuery Shorthand AJAX Methods](http://www.sitepoint.com/introduction-jquery-shorthand-ajax-methods/)
+- [MDN JavaScript data types and data structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
+- [jQuery Event Basics](https://learn.jquery.com/events/event-basics/)
+- [Understanding Event Delegation](http://learn.jquery.com/events/event-delegation/)
+- [jQuery Tutorial](http://tutorials.jenkov.com/jquery/index.html#jquery-version-used-in-this-tutorial)
+- [A beginner's guide to HTTP and REST](http://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340)
+- [Async JS Callbacks](http://sporto.github.io/blog/2012/12/09/callbacks-listeners-promises/)
+- [SitePoint: Intro to jQuery Shorthand AJAX Methods](http://www.sitepoint.com/introduction-jquery-shorthand-ajax-methods/)
 
 ---
 
@@ -93,10 +116,10 @@ Students will create a new repository on GitHub called "feedr" and push their co
 
 The instructional team will grade each technical requirement and provide a numeric grade on a scale.
 
-  - __Technical Requirements__: Did you deliver a project that met all the technical requirements? Given what the class has covered so far, did you build something that was reasonably complex?
-  - __Creativity__: Did you added a personal spin or creative element into your project submission? Did you deliver something of value to the end user (not just a hello world response)?
-  - __Code Quality__: Did you follow code style guidance and best practices covered in class, such as spacing, modularity, and semantic naming? Did you comment your code as your instructors have in class?
-  - __Total__: Your instructors will give you a total score on your project between:
+- __Technical Requirements__: Did you deliver a project that met all the technical requirements? Given what the class has covered so far, did you build something that was reasonably complex?
+- __Creativity__: Did you added a personal spin or creative element into your project submission? Did you deliver something of value to the end user (not just a hello world response)?
+- __Code Quality__: Did you follow code style guidance and best practices covered in class, such as spacing, modularity, and semantic naming? Did you comment your code as your instructors have in class?
+- __Total__: Your instructors will give you a total score on your project between:
 
 Score | Expectations
 ----- | ------------
