@@ -1,11 +1,3 @@
-// Description:
-//
-//
-// Dependencies:
-//   jquery
-//
-// Configuration:
-//   None
-//
-// Commands:
-//   npm install
+/*
+  Please add all Javascript code to this file.
+*/
