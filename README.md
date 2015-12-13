@@ -89,7 +89,7 @@ Here are some sugestions on where to start:
 - Start by adding all the DOM functionality first.
 - Map out all of the needed fields/properties from each respective feed.
 - Start by doing a console.log of the incoming feeds to confirm you have a successful transaction before you start mapping anything out.
-- Make sure you have the JSON View chrome extension to get a clean view of the JSON dump in your browser.
+- Make sure you have the [JSON View chrome extension](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc?hl=en) to get a clean view of the JSON dump in your browser.
 - Think about ways to best standardize all of your incoming data.
 - Test small pieces of functionality frequently, to make sure everything is working.
 - Use tools such as Stack Overflow, Google and documentation resources to solve problems.
