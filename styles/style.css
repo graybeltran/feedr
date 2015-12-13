@@ -29,10 +29,6 @@
   background-position: center center;
 }
 
-#popUp.loader .closePopUp {
-  display: none;
-}
-
 #popUp.loader .container {
   display: none;
 }
