@@ -12,7 +12,9 @@
 			format: 'json'
 		},
 		success: function(response) {
-			console.log(response);
+			for (var i = 0; i < 5; i++) {
+				console.log(response.data.children[i].data.title);
+			}
 		}  	
 	});
 
