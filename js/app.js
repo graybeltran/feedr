@@ -2,41 +2,20 @@
   Please add all Javascript code to this file.
 */
 
-// $(function() {
-
-// 	var source = $("#hello-world-template").html();
-// 	var template = Handlebars.compile(source);
-
-// 	var helloStatement = {
-//   		title: "My New Post", 
-//   		body: "This is my first post!"
-// 	};
-// 	var compiledTemplate = template(helloStatement);
-// 	$('body').append(compiledTemplate);
-// });
-
 'use strict';
 (function() {
 
-// 	$.ajax({
-//        'type': 'GET',
-//     'url': 'http://api.nytimes.com/svc/search/v2/articlesearch.json',
-//     data: {
-//         'response-format': "json",
-//         'api-key': 'fd3780697c5e601fb2a582424a554b69:19:73730023',
-//         'callback': 'svc_search_v2_articlesearch'
-//     },
-//     success: function(response) {
-//         // passed function object for data processing 
-//         console.log(response.docs.headline);
-//     }
-//     //  success: function(response) {
-//     //     // passed function object for data processing 
-//     //     console.log(response.docs[0].headline.main);
-//     // }
-// });
 
 	var redditURL = "https://www.reddit.com/top.json";
+
+	$(document).on( "click", ".articleContent a", function() {
+ 		$('#popUp').removeClass('hidden');
+ 		$('#popUp').removeClass('loader');
+		var title = $(this).find('h3').html();
+		console.log(title);
+		$('#popUp .container h1').replaceWith('<h1>' + title + '</h1>');
+
+	});
   	
   	$.ajax({
 		url: redditURL,
@@ -53,6 +32,7 @@
 	  				thumbnail: this.data.thumbnail,
 	  				impressions: this.data.ups,
 	  				author: this.data.author,
+	  				url: 'https://www.reddit.com' + this.data.permalink
 
 				};
 				var compiledTemplate = template(articleData);
@@ -61,11 +41,7 @@
 				console.log(response.data.children[0].data);
 			});
 
-			$(document).on( "click", ".articleContent a", function() {
- 				$('#popUp').removeClass('hidden');
- 				 $('#popUp').removeClass('loader');
 
-			});
 
 
 			// var source = $("#hello-world-template").html();
