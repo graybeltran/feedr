@@ -18,6 +18,10 @@
 		$('#popUp .container h1').replaceWith('<h1>' + title + '</h1>');
 		$('#popUp .container .popUpAction').attr('href', url);
 	});
+
+	$('.closePopUp').on( "click", function() {
+ 		$('#popUp').addClass('hidden');
+	});
   	
   	$.ajax({
 		url: redditURL,
