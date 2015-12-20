@@ -61,6 +61,12 @@
 				console.log(response.data.children[0].data);
 			});
 
+			$(document).on( "click", ".articleContent a", function() {
+ 				$('#popUp').removeClass('hidden');
+ 				 $('#popUp').removeClass('loader');
+
+			});
+
 
 			// var source = $("#hello-world-template").html();
 			// var template = Handlebars.compile(source);
