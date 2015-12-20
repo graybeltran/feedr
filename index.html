@@ -50,73 +50,34 @@
           </div>
         </div>
         <section id="main" class="container">
-          <article class="article">
-            <section class="featuredImage">
-              {{thumbnail}}
-            </section>
-            <section class="articleContent">
-                <a href="#"><h3>{{title}}</h3></a>
-                <h6>Lifestyle</h6>
-            </section>
-            <section class="impressions">
-              526
-            </section>
-            <div class="clearfix"></div>
-          </article>
-          <article class="article">
-            <section class="featuredImage">
-              <img src="images/article_placeholder_2.jpg" alt="" />
-            </section>
-            <section class="articleContent">
-                <a href="#"><h3>Test article title</h3></a>
-                <h6>Lifestyle</h6>
-            </section>
-            <section class="impressions">
-              526
-            </section>
-            <div class="clearfix"></div>
-          </article>
-          <article class="article">
-            <section class="featuredImage">
-              <img src="images/article_placeholder_2.jpg" alt="" />
-            </section>
-            <section class="articleContent">
-                <a href="#"><h3>Test article title</h3></a>
-                <h6>Lifestyle</h6>
-            </section>
-            <section class="impressions">
-              526
-            </section>
-            <div class="clearfix"></div>
-          </article>
-          <article class="article">
-            <section class="featuredImage">
-              <img src="images/article_placeholder_1.jpg" alt="" />
-            </section>
-            <section class="articleContent">
-                <a href="#"><h3>Test article title</h3></a>
-                <h6>Lifestyle</h6>
-            </section>
-            <section class="impressions">
-              526
-            </section>
-            <div class="clearfix"></div>
-         
-          </article>
-         
+          
 
         </section>
-        <script id="hello-world-template" type="text/x-handlebars-template">
-          <div class="entry">
+       <!--    <div class="entry">
             <h1>{{title}}</h1>
             <div class="body">
               {{body}}
             </div>
-          </div>
-        </script>
+          </div> -->
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="js/handlebars-v4.0.5.js"></script>
         <script src="js/app.js"></script>
+        <script id="article-template" type="text/x-handlebars-template">
+          <article class="article">
+            <section class="featuredImage">
+              <img src="{{thumbnail}}" alt="" />
+            </section>
+            <section class="articleContent">
+                <a href="#"><h3>{{title}}</h3></a>
+                <h6>{{author}}</h6>
+            </section>
+            <section class="impressions">
+              {{impressions}}
+            </section>
+            <div class="clearfix"></div>
+          </article>
+        </script>
 
     </body>
 </html>
