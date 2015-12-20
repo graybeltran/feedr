@@ -8,13 +8,15 @@
 
 	var redditURL = "https://www.reddit.com/top.json";
 
-	$(document).on( "click", ".articleContent a", function() {
+	$(document).on( "click", ".articleContent", function() {
  		$('#popUp').removeClass('hidden');
  		$('#popUp').removeClass('loader');
 		var title = $(this).find('h3').html();
+		var url = $(this).find('#url').html();
 		console.log(title);
+		console.log(url);
 		$('#popUp .container h1').replaceWith('<h1>' + title + '</h1>');
-
+		$('#popUp .container .popUpAction').attr('href', url);
 	});
   	
   	$.ajax({
