@@ -46,10 +46,7 @@
 				$('#popUp').addClass('hidden');
 				console.log(response.data.children[0].data);
 			});
-
-
-
-
+		}	
 			// var source = $("#hello-world-template").html();
 			// var template = Handlebars.compile(source);
 
@@ -83,7 +80,6 @@
 			// for (var i = 0; i < 25; i++) {
 			// 	console.log(response.data.children[i].data);
 			// 	$('body').append(response.data.children[i].data);
-			// }
-		}  	
+			// }  	
 	});
 })();

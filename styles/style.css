@@ -1,4 +1,15 @@
 /* General styles */
+
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);
+
+body {
+    background: #f671a6; 
+    background: -webkit-linear-gradient(#f671a6, #f2c140); 
+    background: -o-linear-gradient(#f671a6, #f2c140);
+    background: -moz-linear-gradient(#f671a6, #f2c140);
+    background: linear-gradient(#f671a6, #f2c140);
+}
+
 .container {
   max-width: 1000px;
   margin: 0 auto;
@@ -59,7 +70,7 @@
 
 /* Header styles */
 header {
-  background-color: #FE052C;
+  background-color: #f671a6;
   position: fixed;
   top: 0;
   left: 0;
@@ -67,6 +78,9 @@ header {
 }
 
 header h1 {
+  font-family: Oswald;
+  font-size: 3rem;
+  font-weight: 300;
   color: #FFF;
   padding: 10px 2%;
   margin: 0;
@@ -156,7 +170,7 @@ nav ul {
 
 nav ul li {
 	display:inline-block;
-	background-color: #CC0020;
+	background-color: #f2c140;
   position: relative;
 }
 
@@ -197,15 +211,14 @@ nav ul ul li {
 }
 
 .article .featuredImage {
-  width: 12%;
+  width: 20%;
   float: left;
-  margin: 1.5%;
-  max-width: 60px;
-}
+  margin: 3.5% 0 1.5%;
+  max-width: 269px;
+}    
 
 .article .featuredImage img {
   max-width: 100%;
-  border-radius: 50px;
 }
 
 .article .articleContent {
@@ -218,8 +231,11 @@ nav ul ul li {
 }
 
 .article .articleContent h3 {
+  font-family: Oswald;
+  font-weight: 700;
+  font-size: 2rem;
   margin-bottom: 0;
-  color: #FE052C;
+  color: black;
 }
 
 .article .articleContent h6 {
